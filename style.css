@@ -1,0 +1,116 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dot-size: 35px;
+    --color-1: #05e75c;
+    --color-2: #ff4004;
+    --color-3: #0c88fb;
+    --color-4: #a81ef7;
+    --color-5: #f3f71e;
+}
+
+html {
+    font-size: large;
+}
+
+main {
+
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+head {
+    text-align: center;
+}
+
+head p {
+    margin: 20px;
+}
+
+.colorSection {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+
+}
+
+.color {
+    min-width: var(--dot-size);
+    max-width: var(--dot-size);
+    min-height: var(--dot-size);
+    border-radius: 50% 50%;
+    border: solid 1px black;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#color-1 {
+    background-color: var(--color-1);
+}
+
+#color-2 {
+    background-color: var(--color-2);
+}
+
+#color-3 {
+    background-color: var(--color-3);
+}
+
+#color-4 {
+    background-color: var(--color-4);
+}
+
+#color-5 {
+    background-color: var(--color-5);
+}
+
+.selectedColor {
+    border: 4px rgb(31, 30, 30) solid;
+}
+
+.jeu{
+
+    display: flex;
+    padding: 0 15px;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    border: crimson solid 2px;
+}
+.grid {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    border: crimson solid 2px;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    width: auto;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.activeLine {
+    border: black 3px solid;
+}
+
+.dot {
+    min-width: var(--dot-size);
+    max-width: var(--dot-size);
+    min-height: var(--dot-size);
+    border-radius: 50% 50%;
+    border: solid 1px black;
+    background-color: white;
+}
