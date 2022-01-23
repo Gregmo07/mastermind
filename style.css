@@ -110,6 +110,10 @@ head p {
     border: none;
 }
 
+.result .line {
+    visibility: hidden;
+}
+
 .dot {
     min-width: var(--dot-size);
     max-width: var(--dot-size);
