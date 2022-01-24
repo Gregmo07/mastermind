@@ -1,4 +1,7 @@
-/** Ajoute la classe 'selectedColor' à l'élément choisi*/
+activeTheDot();
+let puzzle = generatePuzzle();
+
+/** Ajoute la classe 'selectedColor' à la couleur choisie*/
 const colorChoice = document.querySelectorAll(".color");
 colorChoice.forEach((element) => {
   element.addEventListener("click", (e) => {
@@ -9,18 +12,30 @@ colorChoice.forEach((element) => {
 });
 
 
+/**
+ *
+ * @returns la NodeList des points de la ligne active
+ */
 function activeDot() {
   return document.querySelectorAll(".grid>.activeLine>.dot");
 }
 
+/**
+ *
+ * @param {element} e
+ * colorie le dot e avec la couleur choisie
+ */
 function colorTheDot(e) {
   if (e.parentNode.classList.contains("activeLine")) {
     e.style.backgroundColor = getChoosedColor();
   }
 }
 
-activeTheDot();
-/** Colorie le rond cliqué avec la couleur choisie */
+
+/**
+ * Ajoute un eventListener pour colorier le dot
+ *
+ */
 function activeTheDot() {
   activeDot().forEach((element) => {
     element.addEventListener("click", () => colorTheDot(element));
@@ -38,6 +53,7 @@ function activeTheDot() {
 function getChoosedColorDot() {
   return document.querySelector(".selectedColor");
 }
+
 /** retourne la couleur sélectionnée */
 function getChoosedColor() {
   return getComputedStyle(getChoosedColorDot()).backgroundColor;
@@ -48,7 +64,7 @@ function getChoosedColor() {
  * Génération du puzzle aléatoire
  * @return array
  */
-let puzzle = generatePuzzle();
+
 function generatePuzzle() {
   let nbColors = 5;
   const colorArray = [
